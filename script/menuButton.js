@@ -42,16 +42,5 @@ function hideNav() {
     navIcon.style.top = '0';
     navIcon.style.right = '0';
   }, 400);
-  }
+  };
 
-
-
-
-/*
-
-- Display the nav bar when scrolled is decreassing. 
-
-- Hide when the scrolled is increasing.
-
-
-*/
