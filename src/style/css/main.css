@@ -2,11 +2,11 @@
 @import url("var.css");
 @font-face {
   font-family: Regular;
-  src: url("../../src/font/NuntioSans/NunitoSans-Regular.ttf");
+  src: url("../../font/NuntioSans/NunitoSans-Regular.ttf");
 }
 @font-face {
   font-family: ExtraBold;
-  src: url("../../src/font/NuntioSans/NunitoSans-Black.ttf");
+  src: url("../../font/NuntioSans/NunitoSans-Black.ttf");
 }
 * {
   font-family: Regular;
@@ -61,8 +61,8 @@ body {
   width: 100%;
 }
 .heroContent #heroText h1, .heroContent #heroText h1 span {
-  line-height: 3.1rem;
-  font-size: 3.1rem;
+  line-height: 3.3rem;
+  font-size: 3.3rem;
   font-weight: 900;
 }
 .heroContent #heroText .col {
@@ -77,11 +77,6 @@ body {
   border: 2px solid var(--col);
   border-radius: 0.5rem;
   font-size: 1.1rem;
-}
-
-.teo {
-  color: var(--btnCol);
-  background-color: var(--col);
 }
 
 /*|| SECTION*/
@@ -112,21 +107,6 @@ body {
   border-radius: 0.3rem;
   margin: 0 0.5rem;
   background-color: grey;
-}
-.section .sectionIn {
-  margin-bottom: 7rem;
-}
-.section .sectionIn:last-child {
-  margin-bottom: 0;
-}
-.section .sectionIn .demoView {
-  height: 12rem;
-  width: 100%;
-  background: var(--unAvail);
-  border-radius: 0.5rem;
-}
-.section .sectionIn .demoHeading {
-  font-size: 1.5rem;
 }
 
 .demoDescription, p, #socialMedia span {
@@ -172,15 +152,6 @@ body {
 }
 .footer #socialMedia ul li {
   list-style-type: none;
-}
-.footer #socialMedia ul li svg {
-  height: 2.5rem;
-}
-.footer #socialMedia ul li svg path {
-  fill: var(--paraCol);
-}
-.footer #socialMedia ul li svg:hover path {
-  fill: var(--headText);
 }
 
 #dev {

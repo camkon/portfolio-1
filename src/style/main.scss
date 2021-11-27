@@ -14,11 +14,11 @@ $unAvail: var(--unAvail);
 
 @font-face {
   font-family: Regular;
-  src: url("../../src/font/NuntioSans/NunitoSans-Regular.ttf");
+  src: url("../../font/NuntioSans/NunitoSans-Regular.ttf");
 }
 @font-face {
   font-family: ExtraBold;
-  src: url("../../src/font/NuntioSans/NunitoSans-Black.ttf");
+  src: url("../../font/NuntioSans/NunitoSans-Black.ttf");
 }
 
 
@@ -83,8 +83,8 @@ body {
     width: 100%;
     
     h1,h1 span {
-      line-height: 3.1rem;
-      font-size: 3.1rem;
+      line-height: 3.3rem;
+      font-size: 3.3rem;
       font-weight: 900;
     }
 
@@ -103,10 +103,6 @@ body {
   border: 2px solid $col;
   border-radius: 0.5rem;
   font-size: 1.1rem;
-}
-.teo {
-  color: $btnCol;
-  background-color: $col;
 }
 
 
@@ -141,24 +137,8 @@ body {
     }
   }
 
-
-  .sectionIn {
-    margin-bottom: 7rem;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-
-    .demoView {
-      height: 12rem; width: 100%;
-      background: $unAvail;
-      border-radius: 0.5rem;
-    }
-
-    .demoHeading {
-      font-size: 1.5rem;
-    }
-  }
+  // section insides goes here
+  
 }
 
 
@@ -212,20 +192,6 @@ body {
 
       li {
         list-style-type: none;
-
-        svg {
-          height: 2.5rem;
-          
-          path {
-            fill: $paraCol;
-          }
-
-          &:hover {
-            path {
-              fill: $headText;
-            }
-          }
-        }
       }
     }
   }
