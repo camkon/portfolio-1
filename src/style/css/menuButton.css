@@ -1,9 +1,8 @@
 @import url("var.css");
 @font-face {
   font-family: Regular;
-  src: url("../src/font/NuntioSans/NunitoSans-Regular.ttf");
+  src: url("../../font/NuntioSans/NunitoSans-Regular.ttf");
 }
-
 #navIcon {
   position: relative;
   display: flex;
@@ -14,7 +13,6 @@
   cursor: pointer;
   z-index: 6;
 }
-
 #navIcon .line {
   position: absolute;
   height: 0.13rem;
@@ -28,15 +26,12 @@
   animation-iteration-count: 1;
   animation-fill-mode: both;
 }
-
 #navIcon #one {
   top: 0;
 }
-
 #navIcon #two {
   top: 50%;
 }
-
 #navIcon #three {
   top: 100%;
 }
@@ -44,7 +39,6 @@
 .openOne {
   animation-name: openOne;
 }
-
 @keyframes openOne {
   0% {
     top: 0;
@@ -62,7 +56,6 @@
 .openTwo {
   animation-name: openTwo;
 }
-
 @keyframes openTwo {
   0% {
     transform: scale(1);
@@ -75,7 +68,6 @@
 .openThree {
   animation-name: openThree;
 }
-
 @keyframes openThree {
   0% {
     top: 100%;
@@ -93,7 +85,6 @@
 .closeOne {
   animation-name: closeOne;
 }
-
 @keyframes closeOne {
   0% {
     top: 50%;
@@ -111,7 +102,6 @@
 .closeTwo {
   animation-name: closeTwo;
 }
-
 @keyframes closeTwo {
   0% {
     transform: scale(0);
@@ -124,7 +114,6 @@
 .closeThree {
   animation-name: closeThree;
 }
-
 @keyframes closeThree {
   0% {
     top: 50%;
@@ -154,12 +143,11 @@
   transition: left 0.4s;
   transition-delay: 0.1s;
 }
-
 .nav span {
+  margin: 1rem 0;
   font-size: 1.3rem;
   color: var(--paraCol);
 }
-
 .nav span:hover {
   cursor: pointer;
   color: var(--headText);

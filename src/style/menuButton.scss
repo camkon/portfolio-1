@@ -13,7 +13,7 @@ $headText: var(--headText);
 
 @font-face {
   font-family: Regular;
-  src: url("../src/font/NuntioSans/NunitoSans-Regular.ttf");
+  src: url("../../font/NuntioSans/NunitoSans-Regular.ttf");
 }
 
 #navIcon {
@@ -115,6 +115,7 @@ $headText: var(--headText);
   transition-delay: 0.1s;
 
   span {
+    margin: 1rem 0;
     font-size: 1.3rem;
     color: $paraCol;
 
