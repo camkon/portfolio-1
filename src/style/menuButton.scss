@@ -21,7 +21,9 @@ $headText: var(--headText);
   @include flexbox();
   height: 0.8rem; width: 2rem;
   cursor: pointer;
+  margin-top: 1rem;
   z-index: 6;
+  background-color: green;
 
   .line {
     position: absolute;
