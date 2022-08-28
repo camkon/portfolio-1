@@ -1,0 +1,45 @@
+$theme: var(--theme);
+$color: var(--color);
+
+
+.home {
+  height: auto;
+  width: 100%;
+  padding: 0 20rem;
+}
+
+
+.lander-container {
+  display: flex;
+  align-items: center;
+  height: calc(100vh - 6rem);
+  // height: auto;
+  width: 100%;
+  padding: 0 0 5rem 0rem;
+  // background-color: green;
+
+  .bio {
+    height: auto;
+    width: 100%;
+
+    .bio-one {
+      margin-bottom: 2rem;
+    }
+    
+    .bio-two {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+    
+    .bio-three {
+      margin-bottom: 2rem;
+    }
+
+    .bio-four {
+      width: fit-content;
+      padding: 1rem;
+      border: 1px solid $color;
+      border-radius: 0.5rem;
+    }
+  }
+}

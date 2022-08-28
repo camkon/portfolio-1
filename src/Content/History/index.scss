@@ -1,0 +1,8 @@
+$theme: var(--theme);
+$color: var(--color);
+
+.history-container {
+  height: calc(100vh - 6rem);
+  width: 100%;
+  background-color: lawngreen;
+}

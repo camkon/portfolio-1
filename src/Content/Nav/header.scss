@@ -1,0 +1,27 @@
+$theme: var(--theme);
+$color: var(--color);
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 6rem;
+  width: 100%;
+  padding: 0 3rem;
+  color: $color;
+
+  .header-left {
+    height: auto;
+    width: auto;
+  }
+
+  .header-right {
+    display: flex;
+    height: auto;
+    width: auto;
+
+    .menus {
+      margin-left: 2rem;
+    }
+  }
+}

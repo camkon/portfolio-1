@@ -1,0 +1,12 @@
+$theme: var(--theme);
+$color: var(--color);
+
+.layout {
+  position: relative;
+  // height: auto;
+  height: 100vh;
+  width: 100vw;
+  overflow-y: scroll;
+  background-color: $theme;
+  color: $color;
+}
