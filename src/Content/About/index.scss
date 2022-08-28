@@ -1,8 +1,32 @@
 $theme: var(--theme);
+$theme-color: var(--theme-color);
 $color: var(--color);
 
 .about-container {
   height: calc(100vh - 6rem);
   width: 100%;
-  background-color: orange;
+  padding: 5rem 0 5rem 8rem;
+  
+  .about-header {
+    position: relative;
+    font-size: 2rem;
+    width: 100%;
+    // background-color: orange;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      height: 3px;
+      width: calc(100% - 14rem);
+      background-color: $theme-color;
+    }
+
+    span {
+      font-size: 1.25rem;
+      margin-right: 1rem;
+      color: $theme-color;
+    }
+  }
 }
