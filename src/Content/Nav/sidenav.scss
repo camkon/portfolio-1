@@ -20,6 +20,11 @@ $color: var(--color);
 
   .links {
     margin: 1rem 0;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      cursor: pointer;
+      transform: translateY(-0.3rem);
+    }
 
     img {
       height: 1.25rem;
