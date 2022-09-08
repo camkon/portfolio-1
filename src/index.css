@@ -3,6 +3,10 @@
   src: url('./Assets/Fonts/FiraCode-Regular.ttf');
 }
 
+@font-face {
+  font-family: headerBold;
+  src: url('./Assets/Fonts/FiraSans-SemiBold.ttf');
+}
 
 html {
   font-size: 16px;
@@ -19,10 +23,56 @@ body {
   box-sizing: border-box;
 }
 
-:root {
-  /* --theme: #202020; */
-  /* --color: #6f00ff; */
+/* :root {
   --theme: #0a192f;
-  --color: #fff;
+  --theme-light: #112240;
+  --color: #ccd6f6;
+  --grey-text: #8892b0;
   --theme-color: aqua;
+} */
+
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #404040;
 }
+
+.container {
+  height: auto;
+  width: 40rem;
+  background-color: #c9c9c9;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+
+
+
+/* :root {
+  --dark-1: #1c1a22;
+  --dark-2: #3b3748;
+  
+  --light-1: #ccaa39;
+  --light-2: #594c2a;
+} */
+:root {
+  --dark-1: #000000;
+  --dark-2: #333333;
+  
+  --light-1: #ffffff;
+  --light-2: #919191;
+}
+

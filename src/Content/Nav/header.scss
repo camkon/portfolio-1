@@ -1,6 +1,8 @@
-$theme: var(--theme);
-$theme-color: var(--theme-color);
-$color: var(--color);
+$dark-1: var(--dark-1);
+$dark-2: var(--dark-2);
+$light-1: var(--light-1);
+$light-2: var(--light-2);
+
 
 .header-container {
   display: flex;
@@ -9,14 +11,14 @@ $color: var(--color);
   height: 6rem;
   width: 100%;
   padding: 0 3rem;
-  color: $color;
+  color: $light-1;
 
   .header-left {
     height: auto;
     width: auto;
     &:hover {
       cursor: pointer;
-      color: $theme-color;
+      color: $light-2;
     }
   }
 
@@ -27,10 +29,10 @@ $color: var(--color);
 
     .menus {
       margin-left: 2rem;
-      transition: all 0.5s ease-in-out;
+      transition: all 0.2s ease-in-out;
       &:hover {
         cursor: pointer;
-        color: $theme-color;
+        color: $light-2;
       }
     }
   }
