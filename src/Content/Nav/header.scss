@@ -12,14 +12,21 @@ $light-2: var(--light-2);
   width: 100%;
   padding: 0 3rem;
   color: $light-1;
+  // box-shadow: 0rem -2rem 5rem 0 #606060;
 
   .header-left {
     height: auto;
     width: auto;
+    animation-name: header_menus_slide_down;
+    animation-duration: 0.75s;
+    animation-fill-mode: both;
+    animation-delay: 0.1s;
+
     &:hover {
       cursor: pointer;
       color: $light-2;
     }
+
   }
 
   .header-right {
@@ -30,10 +37,163 @@ $light-2: var(--light-2);
     .menus {
       margin-left: 2rem;
       transition: all 0.2s ease-in-out;
+      animation-name: header_menus_slide_down;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      opacity: 0;
+
       &:hover {
         cursor: pointer;
         color: $light-2;
       }
     }
+  }
+}
+
+@keyframes header_menus_slide_down {
+  0%{opacity: 0;transform: translateY(-100%);}
+  100% {opacity: 1;transform: translateY(0);}
+}
+
+@for $i from 1 through 4 {
+  .menus:nth-child(#{$i}) {
+    animation-delay: #{$i / 10}s;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .header-container {
+    position: relative;
+    height: 5rem;
+    padding: 2rem;
+    // box-shadow: 0rem -2rem 5rem 0 #606060;
+
+    .header-right-phone {
+      
+      .phone-menu-head {
+        animation-name: header_menu_head_slide_down;
+        animation-duration: 0.75s;
+        animation-fill-mode: both;
+        animation-delay: 0.3s;
+        
+        &:hover {
+          cursor: pointer;
+          color: $light-2;
+        }
+      }
+
+      @keyframes header_menu_head_slide_down {
+        0%{opacity: 0;transform: translateY(-100%);}
+        100% {opacity: 1;transform: translateY(0);}
+      }
+
+      .phone-menu-options {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        z-index: 10;
+
+        #phone-anime-box {
+          position: relative;
+          height: 100%;
+          width: 100%;
+          // backdrop-filter: blur(1px);
+          
+          .phone-anime-menus {
+            height: 20%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: $dark-1;
+            transform: translateX(100%);
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+          }
+        }
+
+        #phone-menu-box {
+          position: absolute;
+          top: 0; left: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          height: 100%;
+          width: 100%;
+          opacity: 0;
+          animation-duration: 0.6s;
+          animation-fill-mode: forwards;
+          
+  
+          .menus {
+            margin: 2rem 0;
+            transition: all 0.2s ease-in-out;
+  
+            &:hover {
+              cursor: pointer;
+              color: $light-2;
+            }
+          }
+  
+          .close-option {
+            position: absolute;
+            top: 1.9rem;
+            right: 2rem;
+            margin: 0;
+  
+          }
+        }
+
+        //animations
+        .phone-anime-box-open {animation-name: menu_anime_open;} //1
+
+        .phone-anime-box-close {animation-name: menu_anime_close;transform: translateX(0%);} //4
+        
+        .phone-menu-box-open {animation-name: menu_open; animation-delay: 1s;} //2
+        
+        .phone-menu-box-close {animation-name: menu_close;opacity: 1;} //3
+
+        @keyframes menu_anime_open {
+          0% {transform: translateX(100%);}
+          100% {transform: translateX(0);}
+        }
+        @keyframes menu_anime_close {
+          0% {transform: translateX(0%);}
+          100% {transform: translateX(100%);}
+        }
+
+        @keyframes menu_open {
+          0% {opacity: 0;}
+          100% {opacity: 1;}
+        }
+        @keyframes menu_close {
+          0% {opacity: 1;}
+          100% {opacity: 0;}
+        }
+
+      }
+
+      .options-close {
+        animation-name: options_close;
+        animation-duration: 1s;
+        animation-fill-mode: both;
+      }
+
+      @keyframes options_close{
+        0% {background-color: $dark-1;}
+        100% {background-color: transparent;}
+      }
+    }
+  }
+}
+
+
+
+//anime open, close
+@for $i from 1 through 5 {
+  .phone-anime-menus:nth-child(#{$i}) {
+    animation-delay: #{$i / 10}s;
   }
 }

@@ -1,18 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.48c364ee.css",
-    "main.js": "/static/js/main.a080c5c7.js",
+    "main.css": "/static/css/main.f0401b27.css",
+    "main.js": "/static/js/main.d1b46ea8.js",
+    "static/media/me.jpg": "/static/media/me.36accbbf63ec15fddfed.jpg",
+    "static/media/FiraSans-SemiBold.ttf": "/static/media/FiraSans-SemiBold.9b44246405e74df4837c.ttf",
     "static/media/FiraCode-Regular.ttf": "/static/media/FiraCode-Regular.1addc841558439927e3e.ttf",
     "static/media/instagram.svg": "/static/media/instagram.77ce20f8c588237f69e1f03a942a519e.svg",
     "static/media/github.svg": "/static/media/github.d1c49adb9141085dda5eebd3f3e1a8f5.svg",
     "static/media/twitter.svg": "/static/media/twitter.4f7bf4f4db2af2984d50ac0a9068351d.svg",
     "static/media/linkedin.svg": "/static/media/linkedin.73044ee555017150b99a2ebacdfcd19f.svg",
     "index.html": "/index.html",
-    "main.48c364ee.css.map": "/static/css/main.48c364ee.css.map",
-    "main.a080c5c7.js.map": "/static/js/main.a080c5c7.js.map"
+    "main.f0401b27.css.map": "/static/css/main.f0401b27.css.map",
+    "main.d1b46ea8.js.map": "/static/js/main.d1b46ea8.js.map"
   },
   "entrypoints": [
-    "static/css/main.48c364ee.css",
-    "static/js/main.a080c5c7.js"
+    "static/css/main.f0401b27.css",
+    "static/js/main.d1b46ea8.js"
   ]
 }

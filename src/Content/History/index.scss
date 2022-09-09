@@ -5,10 +5,14 @@ $light-2: var(--light-2);
 
 
 .history-container {
+  position: relative;
   height: 100vh;
   width: 100%;
   padding: 0 5rem 0 10rem;
+  opacity: 0;
   // border: 1px solid red;
+
+  // .history-show-mark {position: absolute; top: 50%;}
 
   .history-header {
     position: relative;
@@ -83,7 +87,67 @@ $light-2: var(--light-2);
       width: 70%;
       color: $light-2;
       font-size: 0.9rem;
+      text-align: justify;
     }
   }
 }
 
+
+// tablet mode
+@media screen and (max-width: 1250px) {
+  .history-container {
+    height: 70vh;
+  }
+}
+
+
+// phone
+@media screen and (max-width: 800px) {
+  .history-container {
+    height: auto;
+    padding: 0rem 0rem 20rem 0rem;
+
+    .history-header {
+      text-align: center;
+      &::after {
+        display: none;
+        left: 10rem;
+        width: 45%;
+      }
+    }
+
+    .history-info {
+      flex-wrap: wrap;
+
+      .history-left {
+        width: 100%; 
+        margin-bottom: 2rem;
+
+        &::before {
+          bottom: 0;
+          height: 0.5px;
+          width: 100%;
+          background-color: #303030;
+        }
+
+        .company-names {
+          padding: 0.75rem 0.3rem;
+        }
+
+        .selected-company {
+          position: relative;
+          &::before {
+            top: 98%;
+            left: 0;
+            height: 2.5px;
+            width: 4.5rem;
+          }
+        }
+      }
+
+      .history-right {
+        width: 100%;
+      }
+    }
+  }
+}

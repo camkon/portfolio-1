@@ -1,9 +1,23 @@
+import { useState, useEffect } from 'react'
 import './index.scss'
 
 const History = () => {
+
+  const [show, setShow] = useState(false)
+  const historyObserver = new IntersectionObserver((e) => {
+    e.forEach(i => { if(i.isIntersecting) setShow(true)})
+  })
+  useEffect(() => {
+    historyObserver.observe(document.querySelector(`.history-show-mark`))
+  }, [])
+
   return(
-    <div className="history-container">
+    <div className={show ? "history-container show-up-animation" : "history-container"}>
+    <div className="history-show-mark"></div>
+    {show &&
       <div className="history-header"><span>02.</span>History</div>
+    }
+    {show &&
       <div className="history-info">
         <div className="history-left">
           <div className='company-names selected-company'>Chzapps</div>
@@ -17,6 +31,7 @@ const History = () => {
           <br /><br />
         </div>
       </div>
+    }
     </div>
   )
 }

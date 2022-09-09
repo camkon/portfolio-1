@@ -13,6 +13,12 @@ $light-2: var(--light-2);
   left: 3rem;
   height: auto;
   width: auto;
+  animation-name: nav_slide_up;
+  animation-duration: 1.5s;
+  animation-fill-mode: both;
+  animation-delay: 1.75s; //3rd almost like 5s
+  transition: all 1.5s ease-in-out;
+  z-index: 9;
 
   &::after {
     content: '';
@@ -34,4 +40,29 @@ $light-2: var(--light-2);
       width: 1.25rem;
     }
   }
+}
+
+@keyframes nav_slide_up {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@media screen and (max-width: 800px) {
+  .sidenav-container {
+    left: 2rem;
+
+    &::after {
+      height: 8rem;
+      width: 1px;
+    }
+    
+    .links {
+      margin: 0.5rem 0;
+      img {
+        height: 1rem;
+        width: 1rem;
+      }
+    }
+  }
+
 }

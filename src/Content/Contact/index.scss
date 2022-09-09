@@ -12,20 +12,23 @@ $light-2: var(--light-2);
   position: relative;
   height: 100vh;
   width: 100%;
+  opacity: 0;
+
+  // .contact-show-mark {position: absolute; top: 50%;}
   
   .contact-container-1 {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 90%;
+    height: 85%;
     width: 100%;
   }
   .contact-container-2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 10%;
+    height: 15%;
     width: 100%;
     padding: 1rem;
     // border: 1px solid red;
@@ -75,5 +78,30 @@ $light-2: var(--light-2);
   .footer {
     font-size: 0.9rem;
     color: $light-2;
+  }
+}
+
+
+
+
+
+// tablet mode
+@media screen and (max-width: 1250px) {
+  .contact-container {
+    height: 90vh;
+  }
+}
+
+
+// phone
+@media screen and (max-width: 800px) {
+  .contact-container {
+    height: 100vh;
+
+    .contact-box {
+      p {
+        width: 80%;
+      }
+    }    
   }
 }

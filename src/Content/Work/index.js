@@ -1,11 +1,27 @@
+import { useState, useEffect } from 'react'
 import './index.scss'
 
-const Work = () => {
+const Projects = () => {
+
+  const [show, setShow] = useState(false)
+  const projectObserver = new IntersectionObserver((e) => {
+    e.forEach(i => { if(i.isIntersecting) setShow(true)})
+  })
+  useEffect(() => {
+    projectObserver.observe(document.querySelector(`.project-show-mark`))
+  }, [])
+
   return(
-    <div className="work-container">
-      WORK
+    <div className={show ? "project-container show-up-animation" : "project-container"}>
+    <div className="project-show-mark"></div>
+    {show &&
+      <div className="project-header"><span>03.</span>Projects</div>
+    }  
+    {show &&
+      <div className='project-info'>PROJECTS</div>
+    }  
     </div>
   )
 }
 
-export default Work
+export default Projects

@@ -23,6 +23,13 @@ $light-2: var(--light-2);
     height: auto;
     width: 100%;
 
+    div {
+      animation-name: bios_slide_up;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      opacity: 0;
+    }
+
     .bio-one {
       margin-bottom: 2rem;
       color: $light-1;
@@ -55,3 +62,54 @@ $light-2: var(--light-2);
   }
 }
 
+@keyframes bios_slide_up {
+  0%{opacity: 0;transform: translateY(100%);}
+  100% {opacity: 1;transform: translateY(0);}
+}
+
+@for $i from 1 through 4 {
+  .bio div:nth-child(#{$i}) {
+    animation-delay: #{$i / 5}s;
+  }
+}
+
+
+
+
+// tablet mode
+@media screen and (max-width: 1250px) {
+
+  .home {
+    padding: 0 7rem;
+  }
+
+  .lander-container {
+    height: 70vh;
+  }
+}
+
+
+// phone
+@media screen and (max-width: 800px) {
+
+  .home {
+    padding: 0 5rem;
+  }
+
+  .lander-container {
+    height: 90vh;
+
+    .bio {
+
+      .bio-one {margin-bottom: 2rem;}
+      .bio-two {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+      }
+      .bio-three {margin-bottom: 2rem;}
+      .bio-four {
+        padding: 0.5rem 0.75rem;
+      }
+    }
+  }
+}
