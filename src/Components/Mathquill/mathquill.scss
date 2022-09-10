@@ -1,5 +1,6 @@
 
 body {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,20 +11,29 @@ body {
 
 @font-face {
   font-family: Symbola;
-  src: url('./Assets/Fonts/FiraCode-Regular.ttf');
+  src: url('../../Assets/Fonts/FiraCode-Regular.ttf');
 }
 
-
+//custom
 .mathquill-container {
   position: relative;
   padding: 1rem;
   border-radius: 0.5rem;
 }
 
+.mathquill-static-container {
+  position: relative;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+
+//default
 .mq-editable-field {
   display: -moz-inline-box;
   display: block;
-  width: 100%;
+  width: 100%; ////////////////////////////// relative width
+  width: 25rem; ////////////////////////////// relative width
 }
 .mq-editable-field .mq-cursor {
   border-left: 1px solid black;
@@ -87,22 +97,25 @@ body {
   // display: -moz-inline-box;
   // display: inline-block;
   display: block;
-  width: 20rem; ///////////////////////////// width setting
+  // width: 20rem; ///////////////////////////// width setting
+  width: 100%; ///////////////////////////// width setting - inner padded width
   padding: 2px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   white-space: nowrap;
-  overflow: hidden;
+  // overflow-x: scroll;
 }
 .mq-math-mode {
   font-variant: normal;
   font-weight: normal;
   font-style: normal;
-  font-size: 115%;
+  font-size: 100%;
   line-height: 1;
+  width: 25rem;
   display: -moz-inline-box;
   display: inline-block;
+  background-color: #ccc; //static mode background color
 }
 .mq-math-mode .mq-non-leaf,
 .mq-math-mode .mq-scaled {
@@ -448,10 +461,15 @@ textarea {
   position: absolute;
   font-family: Symbola;
   opacity: 0;
-  width: 20rem;
+  // width: 20rem;
 }
 
 .mq-root-block {
   font-family: Symbola;
+}
 
+//real custom
+.mq-selectable {
+  position: absolute;
+  visibility: hidden;
 }
