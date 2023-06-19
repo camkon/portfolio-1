@@ -1,8 +1,8 @@
 import './index.scss'
 import Lander from './lander'
 import About from '../About'
-import History from '../History'
-import Projects from '../Work'
+import Experience from '../Experience'
+import Projects from '../Projects'
 import Contact from '../Contact'
 
 
@@ -11,7 +11,7 @@ const Home = () => {
     <div className="home">
       <Lander />
       <About />
-      <History />
+      <Experience />
       <Projects />
       <Contact />
     </div>

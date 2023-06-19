@@ -59,25 +59,28 @@ $light-2: var(--light-2);
       height: 18rem;
       width: 35%;
       padding: 1rem;
-      border: 1px solid $dark-2;
+      border: 1px solid #000;
       border-radius: 0.5rem;
-      background-image: url('../../Assets/Images/me.jpg');
+      // background-image: url('../../Assets/Images/me.jpg');
       background-size: cover;
       background-position: center;
-      // box-shadow: 1rem 1rem 1.5rem 0 #252525;
       transition: all 0.3s ease-in-out;
+      cursor: none;
       
       &::after {
-        content: '';
+        content: '404!';
+        display: flex;
+        align-items: center;
+        justify-content: center;
         position: absolute;
         top: 0; left: 0;
         border-radius: 0.5rem;
         height: 100%; width: 100%;
-        background-color: #252525;
+        background-color: #333;
         transition: all 0.3s ease-in-out;
         opacity: 0.5;
       }
-
+      
       &:hover {
         &::after {
           opacity: 0;
@@ -95,7 +98,7 @@ $light-2: var(--light-2);
 // tablet mode
 @media screen and (max-width: 1250px) {
   .about-container {
-    height: 70vh;
+    height: 100vh;
   }
 }
 
@@ -103,7 +106,7 @@ $light-2: var(--light-2);
 @media screen and (max-width: 800px) {
   .about-container {
     height: auto;
-    padding: 5rem 0 20rem 0;
+    padding: 5rem 0 5rem 0;
 
     .about-header {
       text-align: center;

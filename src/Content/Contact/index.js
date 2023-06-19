@@ -16,13 +16,13 @@ const Contact = () => {
       <div className="contact-show-mark"></div>
       {show &&
         <div className="contact-container-1 contact-box">
-          <div className="contact-header"><span>04.</span>Get In Touch</div>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti voluptates labore dolor odio sit, rerum mollitia deserunt nam impedit aperiam quod ut officia eaque voluptatibus molestiae, expedita, vel incidunt aut!</p>
+          <div className="contact-header"><span>03.</span>Get In Touch</div>
+          <p>Even though I'm not very outgoing, I'd love to talk about career, growth and technologies. </p>
           <div className="contact-button">Say Hello!</div>
         </div>
       }
       <div className="contact-container-2 footer">
-        made with lv
+        made with code <span style={{transform: 'rotate(90deg)', margin: '0 0.5rem'}}>:)</span> what else
       </div>
     </div>
   )

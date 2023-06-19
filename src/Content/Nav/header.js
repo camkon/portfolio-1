@@ -15,8 +15,8 @@ const Header = () => {
       {!phone ? 
         <div className="header-right">
           <div className="menus">about()</div>
-          <div className="menus">history()</div>
-          <div className="menus">work()</div>
+          <div className="menus">experience()</div>
+          <div className="menus">projects()</div>
           <div className="menus">contact()</div>
         </div> : 
         <div className="header-right-phone">
@@ -36,10 +36,10 @@ const Header = () => {
                   setMenuAnime(false)
                   setTimeout(() => {setMenu(false)}, 1500);
                 }}>close()</div>
-                <div className="menus">01.about()</div>
-                <div className="menus">02.history()</div>
-                <div className="menus">03.work()</div>
-                <div className="menus">04.contact()</div>
+                <div className="menus">00.about()</div>
+                <div className="menus">01.experience()</div>
+                <div className="menus">02.projects()</div>
+                <div className="menus">03.contact()</div>
               </div>
             </div>
           }

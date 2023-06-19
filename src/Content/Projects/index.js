@@ -15,7 +15,7 @@ const Projects = () => {
     <div className={show ? "project-container show-up-animation" : "project-container"}>
     <div className="project-show-mark"></div>
     {show &&
-      <div className="project-header"><span>03.</span>Projects</div>
+      <div className="project-header"><span>02.</span>Projects</div>
     }  
     {show &&
       <div className='project-info'>PROJECTS</div>

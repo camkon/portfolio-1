@@ -4,7 +4,7 @@ $light-1: var(--light-1);
 $light-2: var(--light-2);
 
 
-.history-container {
+.experience-container {
   position: relative;
   height: 100vh;
   width: 100%;
@@ -12,9 +12,9 @@ $light-2: var(--light-2);
   opacity: 0;
   // border: 1px solid red;
 
-  // .history-show-mark {position: absolute; top: 50%;}
+  // .experience-show-mark {position: absolute; top: 50%;}
 
-  .history-header {
+  .experience-header {
     position: relative;
     font-size: 1.75rem;
     width: 100%;
@@ -23,10 +23,10 @@ $light-2: var(--light-2);
     &::after {
       content: '';
       position: absolute;
-      left: 10rem;
+      left: 13rem;
       top: 50%;
       height: 0.5px;
-      width: 70%;
+      width: 82.2%;
       background-color: $light-2;
     }
 
@@ -39,31 +39,34 @@ $light-2: var(--light-2);
     }
   }
 
-  .history-info {
+  .experience-info {
     display: flex;
     justify-content: space-between;
     height: max-content;
     width: 100%;
     padding: 4rem 0 0 0;
 
-    .history-left {
+    .experience-left {
       position: relative;
       height: max;
       width: 25%;
       // padding-left: 1rem;
 
-      &::before {
-        content: '';
-        position: absolute;
-        left: 1px;
-        height: 100%;
-        width: 0.5px;
-        background-color: $light-2;
-        z-index: 1;
-      }
+        &::before {
+          content: '';
+          position: absolute;
+          left: 1px;
+          height: 100%;
+          min-height: 20rem;
+          width: 0.5px;
+          background-color: $light-2;
+          z-index: 1;
+        }
       
       .company-names {
         padding: 0.3rem 1rem;
+        margin: 0 0 0.5rem 0;
+        cursor: pointer;
       }
       
       .selected-company {
@@ -82,32 +85,44 @@ $light-2: var(--light-2);
       }
     }
 
-    .history-right {
+    .experience-right {
+      display: none;
+    }
+    .experience-right-selected {
+      display: block;
+      position: absolute;
+      top: 6rem;
+      right: 0;
       height: auto;
       width: 70%;
       color: $light-2;
       font-size: 0.9rem;
       text-align: justify;
+      animation-name: experience_right_fade_in;
+      animation-duration: 0.5s;
+      animation-fill-mode: forwards;
+      transition: all 1s ease-in-out;
     }
   }
 }
 
+@keyframes experience_right_fade_in {0%{opacity: 0.5;} 100%{opacity: 1;}}
 
 // tablet mode
 @media screen and (max-width: 1250px) {
-  .history-container {
-    height: 70vh;
+  .experience-container {
+    height: auto;
+    padding: 10rem 0;
   }
 }
 
 
 // phone
 @media screen and (max-width: 800px) {
-  .history-container {
-    height: auto;
-    padding: 0rem 0rem 20rem 0rem;
+  .experience-container {
+    height: 100vh;
 
-    .history-header {
+    .experience-header {
       text-align: center;
       &::after {
         display: none;
@@ -116,22 +131,30 @@ $light-2: var(--light-2);
       }
     }
 
-    .history-info {
+    .experience-info {
       flex-wrap: wrap;
 
-      .history-left {
+      .experience-left {
         width: 100%; 
         margin-bottom: 2rem;
+        display: flex;
 
         &::before {
-          bottom: 0;
+          content: '';
+          position: absolute;
+          bottom: 6px;
+          left: 1px;
           height: 0.5px;
+          min-height: 0.5px;
+          max-height: 0.5px;
           width: 100%;
-          background-color: #303030;
+          background-color: $light-2;
+          z-index: 1;
         }
 
         .company-names {
           padding: 0.75rem 0.3rem;
+          margin-right: 0.5rem;
         }
 
         .selected-company {
@@ -140,13 +163,20 @@ $light-2: var(--light-2);
             top: 98%;
             left: 0;
             height: 2.5px;
-            width: 4.5rem;
+            width: 100%;
           }
         }
       }
 
-      .history-right {
+      .experience-right {
         width: 100%;
+        background-color: red;
+        display: none;
+      }
+      .experience-right-selected {
+        width: 100%;
+        top: 21rem;
+        background-color: transparent;
       }
     }
   }
