@@ -12,7 +12,7 @@ const Contact = () => {
   }, [])
 
   return(
-    <div className={show ? "contact-container show-up-animation" : "contact-container"}>
+    <div id='contact-link' className={show ? "contact-container show-up-animation" : "contact-container"}>
       <div className="contact-show-mark"></div>
       {show &&
         <div className="contact-container-1 contact-box">

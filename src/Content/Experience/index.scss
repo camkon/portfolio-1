@@ -8,8 +8,9 @@ $light-2: var(--light-2);
   position: relative;
   height: 100vh;
   width: 100%;
-  padding: 0 5rem 0 10rem;
+  padding: 5rem 0 0 10rem;
   opacity: 0;
+  // background-color: orange;
   // border: 1px solid red;
 
   // .experience-show-mark {position: absolute; top: 50%;}
@@ -26,7 +27,7 @@ $light-2: var(--light-2);
       left: 13rem;
       top: 50%;
       height: 0.5px;
-      width: 82.2%;
+      width: 74%;
       background-color: $light-2;
     }
 
@@ -40,6 +41,7 @@ $light-2: var(--light-2);
   }
 
   .experience-info {
+    position: relative;
     display: flex;
     justify-content: space-between;
     height: max-content;
@@ -57,7 +59,7 @@ $light-2: var(--light-2);
           position: absolute;
           left: 1px;
           height: 100%;
-          min-height: 20rem;
+          min-height: 26.2rem;
           width: 0.5px;
           background-color: $light-2;
           z-index: 1;
@@ -67,9 +69,11 @@ $light-2: var(--light-2);
         padding: 0.3rem 1rem;
         margin: 0 0 0.5rem 0;
         cursor: pointer;
+        color: $light-2;
       }
       
       .selected-company {
+        color: $light-1;
         position: relative;
         &::before {
           content: '';
@@ -88,13 +92,18 @@ $light-2: var(--light-2);
     .experience-right {
       display: none;
     }
+
+    .experience-title {
+      color: #fff;
+    }
+
     .experience-right-selected {
       display: block;
       position: absolute;
-      top: 6rem;
+      top: 4rem;
       right: 0;
       height: auto;
-      width: 70%;
+      width: 83%;
       color: $light-2;
       font-size: 0.9rem;
       text-align: justify;
@@ -112,6 +121,7 @@ $light-2: var(--light-2);
 @media screen and (max-width: 1250px) {
   .experience-container {
     height: auto;
+    min-height: 100vh;
     padding: 10rem 0;
   }
 }
@@ -120,7 +130,8 @@ $light-2: var(--light-2);
 // phone
 @media screen and (max-width: 800px) {
   .experience-container {
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
 
     .experience-header {
       text-align: center;
@@ -170,13 +181,13 @@ $light-2: var(--light-2);
 
       .experience-right {
         width: 100%;
-        background-color: red;
         display: none;
       }
       .experience-right-selected {
+        position: relative;
         width: 100%;
-        top: 21rem;
-        background-color: transparent;
+        top: -1rem;
+        padding-bottom: 0rem;
       }
     }
   }

@@ -8,6 +8,7 @@ $light-2: var(--light-2);
   height: auto;
   width: 100%;
   padding: 0 18rem;
+  scroll-behavior: smooth;
 }
 
 
@@ -23,7 +24,7 @@ $light-2: var(--light-2);
     height: auto;
     width: 100%;
 
-    div {
+    div, a {
       animation-name: bios_slide_up;
       animation-duration: 1s;
       animation-fill-mode: forwards;
@@ -47,6 +48,7 @@ $light-2: var(--light-2);
     }
 
     .bio-four {
+      display: block;
       width: fit-content;
       padding: 1rem;
       border: 1px solid $light-1;
@@ -68,7 +70,7 @@ $light-2: var(--light-2);
 }
 
 @for $i from 1 through 4 {
-  .bio div:nth-child(#{$i}) {
+  .bio div:nth-child(#{$i}),a:nth-child(#{$i}) {
     animation-delay: #{$i / 5}s;
   }
 }

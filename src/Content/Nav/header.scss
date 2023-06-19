@@ -41,6 +41,8 @@ $light-2: var(--light-2);
       animation-duration: 1s;
       animation-fill-mode: forwards;
       opacity: 0;
+      text-decoration: none;
+      color: $light-1;
 
       &:hover {
         cursor: pointer;
@@ -130,6 +132,8 @@ $light-2: var(--light-2);
           .menus {
             margin: 2rem 0;
             transition: all 0.2s ease-in-out;
+            text-decoration: none;
+            color: $light-1;
   
             &:hover {
               cursor: pointer;

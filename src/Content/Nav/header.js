@@ -7,6 +7,11 @@ const Header = () => {
   const [menu, setMenu] = useState(false)
   const [menuAnime, setMenuAnime] = useState(true)
 
+  const handleCloseMenu = () => {
+    setMenuAnime(false)
+    setTimeout(() => {setMenu(false)}, 1500);
+  }
+
   return(
     <div className="header-container">
       <div className="header-left">
@@ -14,10 +19,10 @@ const Header = () => {
       </div>
       {!phone ? 
         <div className="header-right">
-          <div className="menus">about()</div>
-          <div className="menus">experience()</div>
-          <div className="menus">projects()</div>
-          <div className="menus">contact()</div>
+          <a href='#about-link' className="menus">about()</a>
+          <a href='#experience-link' className="menus">experience()</a>
+          <a href='#project-link' className="menus">projects()</a>
+          <a href='#contact-link' className="menus">contact()</a>
         </div> : 
         <div className="header-right-phone">
           <div className="phone-menu-head" onClick={() => {setMenu(true);setMenuAnime(true)}}>menu()</div>
@@ -32,14 +37,11 @@ const Header = () => {
               </div>
 
               <div id="phone-menu-box" className={menuAnime ? "phone-menu-box-open" : "phone-menu-box-close"}>
-                <div className="menus close-option" onClick={() => {
-                  setMenuAnime(false)
-                  setTimeout(() => {setMenu(false)}, 1500);
-                }}>close()</div>
-                <div className="menus">00.about()</div>
-                <div className="menus">01.experience()</div>
-                <div className="menus">02.projects()</div>
-                <div className="menus">03.contact()</div>
+                <div className="menus close-option" onClick={handleCloseMenu}>close()</div>
+                <a onClick={handleCloseMenu} href='#about-link' className="menus">00.about()</a>
+                <a onClick={handleCloseMenu} href='#experience-link' className="menus">01.experience()</a>
+                <a onClick={handleCloseMenu} href='#project-link' className="menus">02.projects()</a>
+                <a onClick={handleCloseMenu} href='#contact-link' className="menus">03.contact()</a>
               </div>
             </div>
           }

@@ -9,8 +9,6 @@ $light-2: var(--light-2);
   width: 100%;
   padding: 5rem 0 5rem 5rem;
   opacity: 0;
-  // transform: translateY(30%);
-  // background-color:   orange;
 
   .about-show-mark {position: absolute; top: 50%;}
   
@@ -98,7 +96,7 @@ $light-2: var(--light-2);
 // tablet mode
 @media screen and (max-width: 1250px) {
   .about-container {
-    height: 100vh;
+    min-height: 90vh;
   }
 }
 

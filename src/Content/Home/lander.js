@@ -15,12 +15,12 @@ const Lander = () => {
     <div className="lander-container">
       {show && 
         <div className="bio">
-          <div className="bio-one">Hi, my name is</div>
+          <div className="bio-one">Hi, I'm</div>
           <div className="bio-two">Ansaf Nisam. I'm a frontend developer</div>
           <div className="bio-three">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, esse unde! Iure quasi temporibus nesciunt et sed explicabo consequuntur eius veniam, recusandae at! Eveniet minus perferendis odio repellendus saepe, nam a repudiandae sit labore? Quaerat aliquam saepe, dolore quod esse eveniet voluptas illo veritatis laudantium perspiciatis repudiandae vitae, possimus qui.
+            I create awesome scalable web applications. I'd love to work on projects that push me to learn new things and help me grow as a developer. If you have something that we could collaborate on, feel free to connect with me, or if you are looking to hire...
           </div>
-          <div className="bio-four">Download my resume</div>
+          <a className="bio-four" href='../../Assets/Images/Ansaf_Nisam_CV_frontend_developer.pdf' download='Ansaf_Nisam_CV_frontend_developer.pdf'>Download my resume</a>
         </div>
       }
     </div>
