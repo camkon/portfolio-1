@@ -22,6 +22,7 @@ body {
 * {
   margin: 0;
   box-sizing: border-box;
+  cursor: none !important;
 }
 
 :root {
@@ -78,3 +79,4 @@ button {
     font-size: 0.9rem;
   }
 }
+
