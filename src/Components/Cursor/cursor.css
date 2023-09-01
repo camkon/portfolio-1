@@ -1,30 +1,30 @@
-/* .cover {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    background-color: #fff;
-    z-index: 0;
-} */
-
 .ring {
     position: fixed;
     top: 0;
     left: 0;
-    width: 4rem;
-    height: 4rem;
-    border: 2px solid #a0a0a0;
     /* background-color: black; */
     border-radius: 100%;
     transform: translate(-50%, -50%);
-    -webkit-transition-duration: 100ms;
-    transition-duration: 100ms;
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
     will-change: width, height, transform, border;
     z-index: 999;
     pointer-events: none;
+}
+
+.ring-1 {
+    border: 2px solid #37008f;
+    width: 4rem;
+    height: 4rem;
+    -webkit-transition-duration: 200ms;
+    transition-duration: 200ms;
+}
+.ring-2 {
+    border: 2px solid #24005f;
+    width: 8rem;
+    height: 8rem;
+    -webkit-transition-duration: 400ms;
+    transition-duration: 400ms;
 }
 
 .dot {
@@ -33,9 +33,29 @@
     left: 50%;
     width: 10px;
     height: 10px;
-    background-color: #fff;
+    background-color: #6200ff;
     border-radius: 100%;
     transform: translate(-50%, -50%);
     z-index: 999;
     pointer-events: none;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;     
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    background: radial-gradient(circle at var(--x) var(--y), rgba(39, 39, 39, 0.589) 10%, black 50%);
+    transition: 400ms background ease;
+}
+
+.gradient-overlay {
+    background: radial-gradient(circle at var(--x) var(--y), #6200ff 10rem, #fff 12rem);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    transition-property: all;
+    transition-duration: 1000ms;
+    transition-timing-function: ease;
+    transition-delay: 50ms;
 }

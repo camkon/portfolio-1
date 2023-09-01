@@ -7,10 +7,10 @@ const DotCursor = () => {
 
     return (
         <>
-            {/* <div className="cover"> */}
-            <div className='ring' style={{left: `${x}px`, top: `${y}px`}}></div>
+            <div className='ring ring-1' style={{left: `${x}px`, top: `${y}px`}}></div>
+            <div className='ring ring-2' style={{left: `${x}px`, top: `${y}px`}}></div>
             <div className='dot' style={{left: `${x}px`, top: `${y}px`}}></div>
-            {/* </div> */}
+            {/* <div className="overlay"></div> */}
         </>
     )
 }

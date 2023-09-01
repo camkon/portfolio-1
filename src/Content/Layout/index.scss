@@ -9,6 +9,7 @@ $light-2: var(--light-2);
   height: 100vh;
   width: 100vw;
   overflow-y: scroll;
+  scroll-behavior: smooth;
   background-color: $dark-1;
   color: $light-1;
 }
