@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import './index.scss'
+import { handleMouseEnter, handleMouseLeave } from '../../Hooks/useCursor'
 
 const Experience = () => {
 
@@ -16,7 +17,7 @@ const Experience = () => {
     <div id='experience-link' className={show ? "experience-container show-up-animation" : "experience-container"}>
     <div className="experience-show-mark"></div>
     {show &&
-      <div className="experience-header gradient-overlay"><span>01.</span>Experience</div>
+      <div className="experience-header gradient-overlay" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}><span>01.</span>Experience</div>
     }
     {show &&
       <div className="experience-info">
@@ -29,7 +30,7 @@ const Experience = () => {
         <div className={selected === 1 ? 'experience-right-selected' : 'experience-right'}>
           <div className='experience-title'>FrontEnd Developer (part-time, remote) <br/> Nov 2022 - Present</div>
           <br />
-          Joined this startup during its inception and assumed responsibility for full-stack frontend development, overseeing the entire lifecycle of product development. I played a key role in architecting and implementing robust and scalable frontend solutions for the company's products. Im primary responsibilities include:
+          Joined this startup during its inception and assumed responsibility for complete frontend development, overseeing the entire lifecycle of the product's development. I played a key role in architecting and implementing robust and scalable frontend solutions for the company's products. My primary responsibilities include:
           <br /><br />
           <ul>
             <li>Developed and maintained responsive web applications using ReactJs and Typescript and ReactJs libraries like Material UI, Ant Design and numerous utility packages.</li>

@@ -38,6 +38,8 @@
     transform: translate(-50%, -50%);
     z-index: 999;
     pointer-events: none;
+    will-change: height, width;
+    transition: height 300ms ease, width 300ms ease;
 }
 
 .overlay {
@@ -51,7 +53,7 @@
 }
 
 .gradient-overlay {
-    background: radial-gradient(circle at var(--x) var(--y), #6200ff 10rem, #fff 12rem);
+    background: radial-gradient(circle at var(--x) var(--y), #6200ff 5rem, #fff 5rem);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     transition-property: all;
