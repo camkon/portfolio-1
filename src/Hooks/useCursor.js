@@ -1,22 +1,11 @@
 import {useState, useEffect} from 'react'
 
-var dot = document.querySelector(`.dot`)
-
-export const handleMouseEnter = () => {
-    console.log(dot)
-    dot.style.height = '10rem'; dot.style.width = '10rem';
-    dot.style.border = '1px solid #6200ff'; dot.style.background = 'transparent';
-}
-export const handleMouseLeave = () => {
-        dot.style.height = '10px'; dot.style.width = '10px';
-        dot.style.border = 'none'; dot.style.background = '#6200ff';
-}
-
 const useCursorPosition = () => {
 
     const [cursorPosition, setCursorPosition] = useState({x: null, y: null})
     const overlay = document.documentElement
     const gradient_overlay = document.querySelectorAll(`.gradient-overlay`)
+    const dot = document.querySelectorAll(`.dot`)
 
 
     useEffect(() => {

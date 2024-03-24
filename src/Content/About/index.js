@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import './index.scss'
-import { handleMouseEnter, handleMouseLeave } from '../../Hooks/useCursor'
 
 const About = () => {
 
@@ -16,7 +15,7 @@ const About = () => {
     <div id="about-link" className={show ? "about-container show-up-animation" : "about-container"}>
     <span className="about-show-mark"></span>
     {show && 
-      <div className="about-header gradient-overlay" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}><span>00.</span>About me</div>
+      <div className="about-header gradient-overlay"><span>00.</span>About me</div>
     }
     {show && 
       <div className="about-info">

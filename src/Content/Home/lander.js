@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import './index.scss'
 import Resume from '../../Assets/Images/Ansaf_Nisam_Frontend_Dev_Resume.pdf'
-import { handleMouseEnter, handleMouseLeave } from '../../Hooks/useCursor'
 
 const Lander = () => {
 
@@ -12,6 +11,17 @@ const Lander = () => {
       setShow(true)
     }, 700);
   },[])
+
+  const dot = document.querySelector(`.dot`)
+
+  const handleMouseEnter = () => {
+    dot.style.height = '10rem'; dot.style.width = '10rem';
+    dot.style.border = '1px solid #6200ff'; dot.style.background = 'transparent';
+  }
+  const handleMouseLeave = () => {
+    dot.style.height = '10px'; dot.style.width = '10px';
+    dot.style.border = 'none'; dot.style.background = '#6200ff';
+  }
 
   return(
     <div className="lander-container">

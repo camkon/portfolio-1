@@ -65,14 +65,21 @@ $light-2: var(--light-2);
       border-radius: 0.5rem;
       color: $light-1;
       transition: all 0.2s ease-in-out;
+      
+      a {
+        color: $light-1;
+        text-decoration: none;
+      }
       &:hover {
         cursor: pointer;
         color: $light-2;
         border: 1px solid $light-2;
+        a {
+          color: $light-2;
+          text-decoration: underline;
+        }
       }
     }
-
-
   }
 
   .footer {

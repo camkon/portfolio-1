@@ -1,8 +1,8 @@
 .ring {
     position: fixed;
-    top: 0;
-    left: 0;
-    /* background-color: black; */
+    top: 100;
+    left: 100;
+    /* background-color: red; */
     border-radius: 100%;
     transform: translate(-50%, -50%);
     -webkit-transition-timing-function: ease-out;
